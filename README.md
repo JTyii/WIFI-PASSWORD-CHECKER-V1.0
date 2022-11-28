@@ -1,14 +1,14 @@
-# PASSWORD-VIEWRER
+# PASSWORD-CHECKER
 @echo off<br/>
 color 02<br/>
 :menu<br/>
 cls<br/>
-echo --PASSWORD VIEWRER--v1.0<br/>
+echo --PASSWORD CHECKER--v1.0<br/>
 echo.<br/>
 echo.<br/>
 echo Choose a number<br/>
 echo.<br/>
-echo 1.Start hacking<br/>
+echo 1.Start checking<br/>
 echo 2.How to use<br/>
 echo 3.Exit<br/>
 set /p c=<br/>
@@ -18,7 +18,7 @@ if %c%==3 goto exit<br/>
 goto menu<br/>
 :start<br/>
 cls<br/>
-echo --PASSWORD VIEWRER--v1.0<br/>
+echo --PASSWORD CHECKER--v1.0<br/>
 netsh wlan show profiles<br/>
 goto profiles<br/>
 :profiles<br/>
@@ -26,6 +26,9 @@ echo Choose the wifi name you want to know the password and write down.<br/>
 echo.<br/>
 echo !!!Please type the exact wifi name as shown on the above.!!!<br/>
 echo.<br/>
+echo ATTENTION!!! If the wifi name have space between it, put "" at two sides of the name.<br/>
+echo. <br/>
+echo Ctrl+C , Ctrl+V is allowed to copypaste the wifi name.<br/>
 pause<br/>
 echo WIFI NAME:<br/>
 set /p name=<br/>
