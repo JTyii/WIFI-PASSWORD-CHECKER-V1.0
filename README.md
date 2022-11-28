@@ -55,7 +55,7 @@ if %choose%==E goto exit<br/>
 goto done<br/>
 :ins<br/>
 cls<br/>
-echo --PASSWORD VIEWRER--v1.0<br/>
+echo --PASSWORD CHECKER--v1.0<br/>
 echo.<br/>
 echo.<br/>
 echo ATTENTION!!! If the wifi name have space between it, put "" at two sides of the name.<br/>
