@@ -1,4 +1,4 @@
-**# WIFI-PASSWORD-CHECKER-V1.0**:mag: 
+**# WIFI-PASSWORD-CHECKER-V1.0**:mag: <br/>
 **ICON**: ![Capture](https://user-images.githubusercontent.com/91330862/206841485-00d44844-caba-491b-8011-388a178988f6.PNG)
 
 # HOW TO DOWNLOAD 
