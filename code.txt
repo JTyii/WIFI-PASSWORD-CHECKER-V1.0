@@ -1,0 +1,82 @@
+@echo off
+color 0a
+title WIFI-PASSWORD-CHECKER
+:menu
+cls
+echo --WIFI-PASSWORD-CHECKER--v1.0
+echo.
+echo.
+echo Choose your choice
+echo.
+echo 1.Start checking
+echo 2.About this app
+echo 3.Exit
+set /p c=
+if %c%==1 goto start
+if %c%==2 goto ins
+if %c%==3 goto exit
+goto menu
+:start
+cls
+echo --WIFI-PASSWORD-CHECKER--v1.0
+netsh wlan show profiles
+goto profiles
+:profiles
+echo Choose the wifi name you want to know the password and write down.
+echo.
+echo !!!Please type the exact wifi name as shown on the above.!!!
+echo.
+pause
+echo.
+echo WIFI NAME:
+set /p name=
+if "%name%" == "" goto empty
+echo CHECKING.........
+ping localhost -n 3 >nul
+echo CHECKING.........
+ping localhost -n 2 >nul
+goto hack
+:empty
+cls
+echo No wifi name detected, Please try again!
+pause
+goto start
+:hack
+netsh wlan show profiles "%name%" key=clear | findstr /R /C:"Key Content"
+echo The password is shown at Security settings (Key Content)
+pause
+goto done
+:done
+cls
+echo The password is already checked.Thanks for using this application.
+echo.
+echo Do you want to check again(y/Y) or exit(e/E)?
+set /p choose=
+if %choose%==y goto start
+if %choose%==Y goto start
+if %choose%==e goto exit
+if %choose%==E goto exit
+goto done
+:ins
+cls
+echo ======================================================================================
+echo.
+echo --WIFI-PASSWORD-CHECKER--v1.0
+echo.
+echo.
+echo This application is developed for checking wifi password that had been stored. 
+echo.  
+echo Ctrl+C , Ctrl+V is allowed to copypaste the wifi name.
+echo Thanks.:D
+echo.
+echo MADE BY JTyii
+echo Follow JTyii in github for new versions
+echo Email: justinfishball@gmail.com
+echo ======================================================================================
+pause
+goto menu
+:exit
+echo This application is made by JTyii
+echo Thank you for using! -v-
+pause
+exit
